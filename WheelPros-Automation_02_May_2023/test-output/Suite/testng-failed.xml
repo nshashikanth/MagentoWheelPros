@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.wheelpros.extentreportlistener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="ca"/>
+        <exclude name="uk"/>
+        <exclude name="us"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.wheelpros.qa.testcases.CreditAppCATestCase">
+        <methods>
+          <include name="validatePSTSpclCharacters"/>
+          <include name="validateTireRecyclingSpclCharacters"/>
+          <include name="preparingTestEnv"/>
+          <include name="beforeTestCase"/>
+          <include name="validateTireRecycling16Characters"/>
+          <include name="validateTireRecycling15Characters"/>
+          <include name="validateTireRecycling1Characters"/>
+          <include name="tearDownDriver"/>
+        </methods>
+      </class> <!-- com.wheelpros.qa.testcases.CreditAppCATestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
